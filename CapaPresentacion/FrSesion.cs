@@ -19,8 +19,20 @@ namespace CapaPresentacion
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            FrMenu1 frMenu1 = new FrMenu1();
-            frMenu1.Show();
+            if (txtUsuario.Text == "Demo" && txtContraseña.Text =="1234")
+            {
+
+                FrMenu1 frMenu1 = new FrMenu1();
+                frMenu1.Show();
+            }
+            else
+            {
+                MessageBox.Show("El usuario y la contreña que ingreso es incorrecto");
+                txtUsuario.Clear();
+                txtContraseña.Clear();
+                txtUsuario.Focus();
+            }
+            
         }
     }
 }
