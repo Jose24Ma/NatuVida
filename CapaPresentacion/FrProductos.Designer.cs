@@ -101,7 +101,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(587, 349);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "Ingresar productos";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // btnLimpiar
@@ -170,7 +170,7 @@
             this.label4.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.Location = new System.Drawing.Point(98, 132);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 28);
+            this.label4.Size = new System.Drawing.Size(62, 28);
             this.label4.TabIndex = 2;
             this.label4.Text = "Valor:";
             // 
@@ -205,7 +205,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(587, 349);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Text = "Consultar producto";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // GridProductos
@@ -256,7 +256,7 @@
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(587, 349);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.Text = "Modificar producto";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // cbProducto
@@ -288,7 +288,7 @@
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage4.Size = new System.Drawing.Size(587, 349);
             this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "tabPage4";
+            this.tabPage4.Text = "Eliminar producto";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // cbProducto4

@@ -51,13 +51,13 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbClienteModificar = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cbClienteEliminar = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -110,7 +110,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(646, 333);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "Ingresar cliente";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // txtCorreo
@@ -187,7 +187,7 @@
             this.label5.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.Location = new System.Drawing.Point(103, 165);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 28);
+            this.label5.Size = new System.Drawing.Size(92, 28);
             this.label5.TabIndex = 3;
             this.label5.Text = "Telefono:";
             // 
@@ -232,7 +232,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(646, 333);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Text = "Consultar cliente";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // btnConsultarCli
@@ -278,14 +278,14 @@
             // 
             this.tabPage3.Controls.Add(this.button1);
             this.tabPage3.Controls.Add(this.dataGridView1);
-            this.tabPage3.Controls.Add(this.comboBox1);
+            this.tabPage3.Controls.Add(this.cbClienteModificar);
             this.tabPage3.Controls.Add(this.label8);
             this.tabPage3.Location = new System.Drawing.Point(4, 24);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(646, 333);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.Text = "Modificar cliente";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // button1
@@ -306,20 +306,20 @@
             this.dataGridView1.Size = new System.Drawing.Size(503, 182);
             this.dataGridView1.TabIndex = 2;
             // 
-            // comboBox1
+            // cbClienteModificar
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(200, 55);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(319, 29);
-            this.comboBox1.TabIndex = 1;
+            this.cbClienteModificar.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbClienteModificar.FormattingEnabled = true;
+            this.cbClienteModificar.Location = new System.Drawing.Point(200, 28);
+            this.cbClienteModificar.Name = "cbClienteModificar";
+            this.cbClienteModificar.Size = new System.Drawing.Size(319, 36);
+            this.cbClienteModificar.TabIndex = 1;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(72, 39);
+            this.label8.Location = new System.Drawing.Point(72, 18);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(131, 46);
             this.label8.TabIndex = 0;
@@ -327,44 +327,17 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.cbClienteEliminar);
             this.tabPage4.Controls.Add(this.button2);
             this.tabPage4.Controls.Add(this.dataGridView2);
-            this.tabPage4.Controls.Add(this.textBox1);
             this.tabPage4.Controls.Add(this.label9);
             this.tabPage4.Location = new System.Drawing.Point(4, 24);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage4.Size = new System.Drawing.Size(646, 333);
             this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "tabPage4";
+            this.tabPage4.Text = "Eliminar cliente";
             this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(81, 20);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(131, 46);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Cliente:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(218, 30);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(338, 34);
-            this.textBox1.TabIndex = 1;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(69, 85);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowTemplate.Height = 25;
-            this.dataGridView2.Size = new System.Drawing.Size(514, 201);
-            this.dataGridView2.TabIndex = 2;
             // 
             // button2
             // 
@@ -377,6 +350,34 @@
             this.button2.Text = "Eliminar";
             this.button2.UseVisualStyleBackColor = false;
             // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(69, 85);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowTemplate.Height = 25;
+            this.dataGridView2.Size = new System.Drawing.Size(514, 201);
+            this.dataGridView2.TabIndex = 2;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label9.Location = new System.Drawing.Point(69, 12);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(131, 46);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Cliente:";
+            // 
+            // cbClienteEliminar
+            // 
+            this.cbClienteEliminar.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbClienteEliminar.FormattingEnabled = true;
+            this.cbClienteEliminar.Location = new System.Drawing.Point(200, 22);
+            this.cbClienteEliminar.Name = "cbClienteEliminar";
+            this.cbClienteEliminar.Size = new System.Drawing.Size(333, 36);
+            this.cbClienteEliminar.TabIndex = 4;
+            // 
             // FrClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -385,7 +386,7 @@
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label1);
             this.Name = "FrClientes";
-            this.Text = "FrClientes";
+            this.Text = "Clientes";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -430,10 +431,10 @@
         private Label label8;
         private Button button1;
         private DataGridView dataGridView1;
-        private ComboBox comboBox1;
-        private TextBox textBox1;
+        private ComboBox cbClienteModificar;
         private Label label9;
         private Button button2;
         private DataGridView dataGridView2;
+        private ComboBox cbClienteEliminar;
     }
 }

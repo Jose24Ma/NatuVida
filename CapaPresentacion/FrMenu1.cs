@@ -24,7 +24,7 @@ namespace CapaPresentacion
             frProductos.MdiParent = this;
             this.splitContainer1.Panel2.Controls.Add(frProductos);
             frProductos.Show();
-           
+
         }
 
 
@@ -51,6 +51,11 @@ namespace CapaPresentacion
             frClientes.MdiParent = this;
             this.splitContainer1.Panel2.Controls.Add(frClientes);
             frClientes.Show();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+using CapaEntidad;
+using CapaNegocio;
 
 namespace CapaPresentacion
 {
@@ -14,25 +17,43 @@ namespace CapaPresentacion
     {
         public FrSesion()
         {
-            InitializeComponent();
+            InitializeComponent(); 
         }
-
+        MySqlConnection connection = new MySqlConnection("Server=Localhost;User=root;Password=admin;Port=3306;Database=naturvida;");
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            if (txtUsuario.Text == "Demo" && txtContraseña.Text =="1234")
+            try
             {
-
-                FrMenu1 frMenu1 = new FrMenu1();
-                frMenu1.Show();
+                connection.Open();
+                MySqlCommand comando = new MySqlCommand("SELECT venUsuario,venConstrasena FROM tbl_vendedor WHERE venUsuario = @vusuario AND venConstrasena = @vconstrasena", connection);
+                comando.Parameters.AddWithValue("@vusuario", txtUsuario.Text);
+                comando.Parameters.AddWithValue("@vconstrasena", txtContraseña.Text);
+                MySqlDataReader lector = comando.ExecuteReader();
+                if (lector.Read())
+                {
+                    FrMenu1 frMenu1 = new FrMenu1();
+                    frMenu1.Show();
+                }
+                else if (txtUsuario.Text == string.Empty || txtContraseña.Text == string.Empty)
+                {
+                    MessageBox.Show("El usuario y/o contraseña son obligatorios");
+                }
+                else
+                {
+                    MessageBox.Show("Usuario y/o Contraseña incorrecta");
+                    txtUsuario.Clear();
+                    txtContraseña.Clear();
+                    txtUsuario.Focus();
+                }
             }
-            else
+            catch(Exception ex)
             {
-                MessageBox.Show("El usuario y la contreña que ingreso es incorrecto");
-                txtUsuario.Clear();
-                txtContraseña.Clear();
-                txtUsuario.Focus();
+                MessageBox.Show(ex.Message);
             }
-            
+            finally
+            {
+                connection.Close();
+            }
         }
     }
 }

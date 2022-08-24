@@ -64,9 +64,9 @@
             this.label3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(82, 249);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(140, 32);
+            this.label3.Size = new System.Drawing.Size(139, 32);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Contreseña:";
+            this.label3.Text = "Contraseña:";
             // 
             // txtUsuario
             // 
@@ -81,6 +81,7 @@
             this.txtContraseña.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtContraseña.Location = new System.Drawing.Point(276, 247);
             this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.Size = new System.Drawing.Size(386, 34);
             this.txtContraseña.TabIndex = 4;
             // 
@@ -88,12 +89,12 @@
             // 
             this.btnIngresar.BackColor = System.Drawing.Color.CadetBlue;
             this.btnIngresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnIngresar.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnIngresar.Font = new System.Drawing.Font("Book Antiqua", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnIngresar.Location = new System.Drawing.Point(325, 362);
             this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(108, 39);
+            this.btnIngresar.Size = new System.Drawing.Size(127, 38);
             this.btnIngresar.TabIndex = 5;
-            this.btnIngresar.Text = "INGRESAR";
+            this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.UseVisualStyleBackColor = false;
             this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
@@ -101,6 +102,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.txtContraseña);
@@ -108,8 +110,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "FrSesion";
-            this.Text = "Inicio Sesion";
+            this.Text = "Tienda Naturista Naturvida";
+            this.TransparencyKey = System.Drawing.Color.White;
             this.ResumeLayout(false);
             this.PerformLayout();
 
