@@ -2,7 +2,15 @@
 {
     public class CeCliente
     {
-        public string Usuario { get; set; }
-        public string Constrasena { get; set; }
+       
+
+        public int proCodigo { get; set; }
+        public string proDescripcion { get; set; }
+        public int proValor { get; set; }
+        public int proCantidad { get; set; }
+
+
+
+       
     }
 }

@@ -1,3 +1,5 @@
+using CapaEntidad;
+using CapaNegocio;
 namespace CapaPresentacion
 {
     internal static class Program

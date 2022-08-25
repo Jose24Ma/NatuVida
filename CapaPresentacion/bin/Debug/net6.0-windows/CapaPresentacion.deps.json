@@ -635,13 +635,17 @@
       },
       "CapaDatos/1.0.0": {
         "dependencies": {
-          "CapaEntidad": "1.0.0"
+          "CapaEntidad": "1.0.0",
+          "MySql.Data": "8.0.30"
         },
         "runtime": {
           "CapaDatos.dll": {}
         }
       },
       "CapaEntidad/1.0.0": {
+        "dependencies": {
+          "MySql.Data": "8.0.30"
+        },
         "runtime": {
           "CapaEntidad.dll": {}
         }
@@ -649,7 +653,8 @@
       "CapaNegocio/1.0.0": {
         "dependencies": {
           "CapaDatos": "1.0.0",
-          "CapaEntidad": "1.0.0"
+          "CapaEntidad": "1.0.0",
+          "MySql.Data": "8.0.30"
         },
         "runtime": {
           "CapaNegocio.dll": {}

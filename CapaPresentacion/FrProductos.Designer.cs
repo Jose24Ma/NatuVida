@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.tcProductos3 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tcProductos = new System.Windows.Forms.TabControl();
+            this.tpIngresarPro = new System.Windows.Forms.TabPage();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.txtCantidad = new System.Windows.Forms.TextBox();
@@ -41,23 +41,23 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tpConsultarPro = new System.Windows.Forms.TabPage();
             this.GridProductos = new System.Windows.Forms.DataGridView();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.cbProductos2 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tpModificarPro = new System.Windows.Forms.TabPage();
             this.cbProducto = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tpEliminarPro = new System.Windows.Forms.TabPage();
             this.cbProducto4 = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.tcProductos3.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.tcProductos.SuspendLayout();
+            this.tpIngresarPro.SuspendLayout();
+            this.tpConsultarPro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridProductos)).BeginInit();
-            this.tabPage3.SuspendLayout();
-            this.tabPage4.SuspendLayout();
+            this.tpModificarPro.SuspendLayout();
+            this.tpEliminarPro.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -72,37 +72,37 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Gestion de Productos";
             // 
-            // tcProductos3
+            // tcProductos
             // 
-            this.tcProductos3.Controls.Add(this.tabPage1);
-            this.tcProductos3.Controls.Add(this.tabPage2);
-            this.tcProductos3.Controls.Add(this.tabPage3);
-            this.tcProductos3.Controls.Add(this.tabPage4);
-            this.tcProductos3.Location = new System.Drawing.Point(97, 61);
-            this.tcProductos3.Name = "tcProductos3";
-            this.tcProductos3.SelectedIndex = 0;
-            this.tcProductos3.Size = new System.Drawing.Size(595, 377);
-            this.tcProductos3.TabIndex = 1;
+            this.tcProductos.Controls.Add(this.tpIngresarPro);
+            this.tcProductos.Controls.Add(this.tpConsultarPro);
+            this.tcProductos.Controls.Add(this.tpModificarPro);
+            this.tcProductos.Controls.Add(this.tpEliminarPro);
+            this.tcProductos.Location = new System.Drawing.Point(97, 61);
+            this.tcProductos.Name = "tcProductos";
+            this.tcProductos.SelectedIndex = 0;
+            this.tcProductos.Size = new System.Drawing.Size(595, 377);
+            this.tcProductos.TabIndex = 1;
             // 
-            // tabPage1
+            // tpIngresarPro
             // 
-            this.tabPage1.Controls.Add(this.btnLimpiar);
-            this.tabPage1.Controls.Add(this.btnGuardar);
-            this.tabPage1.Controls.Add(this.txtCantidad);
-            this.tabPage1.Controls.Add(this.txtValor);
-            this.tabPage1.Controls.Add(this.txtDescripcion);
-            this.tabPage1.Controls.Add(this.txtCodigo);
-            this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Location = new System.Drawing.Point(4, 24);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(587, 349);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Ingresar productos";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tpIngresarPro.Controls.Add(this.btnLimpiar);
+            this.tpIngresarPro.Controls.Add(this.btnGuardar);
+            this.tpIngresarPro.Controls.Add(this.txtCantidad);
+            this.tpIngresarPro.Controls.Add(this.txtValor);
+            this.tpIngresarPro.Controls.Add(this.txtDescripcion);
+            this.tpIngresarPro.Controls.Add(this.txtCodigo);
+            this.tpIngresarPro.Controls.Add(this.label5);
+            this.tpIngresarPro.Controls.Add(this.label4);
+            this.tpIngresarPro.Controls.Add(this.label3);
+            this.tpIngresarPro.Controls.Add(this.label2);
+            this.tpIngresarPro.Location = new System.Drawing.Point(4, 24);
+            this.tpIngresarPro.Name = "tpIngresarPro";
+            this.tpIngresarPro.Padding = new System.Windows.Forms.Padding(3);
+            this.tpIngresarPro.Size = new System.Drawing.Size(587, 349);
+            this.tpIngresarPro.TabIndex = 0;
+            this.tpIngresarPro.Text = "Ingresar productos";
+            this.tpIngresarPro.UseVisualStyleBackColor = true;
             // 
             // btnLimpiar
             // 
@@ -112,6 +112,7 @@
             this.btnLimpiar.TabIndex = 9;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnGuardar
             // 
@@ -121,6 +122,7 @@
             this.btnGuardar.TabIndex = 8;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // txtCantidad
             // 
@@ -194,19 +196,20 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Codigo:";
             // 
-            // tabPage2
+            // tpConsultarPro
             // 
-            this.tabPage2.Controls.Add(this.GridProductos);
-            this.tabPage2.Controls.Add(this.btnConsultar);
-            this.tabPage2.Controls.Add(this.cbProductos2);
-            this.tabPage2.Controls.Add(this.label6);
-            this.tabPage2.Location = new System.Drawing.Point(4, 24);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(587, 349);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Consultar producto";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tpConsultarPro.Controls.Add(this.GridProductos);
+            this.tpConsultarPro.Controls.Add(this.btnConsultar);
+            this.tpConsultarPro.Controls.Add(this.cbProductos2);
+            this.tpConsultarPro.Controls.Add(this.label6);
+            this.tpConsultarPro.Location = new System.Drawing.Point(4, 24);
+            this.tpConsultarPro.Name = "tpConsultarPro";
+            this.tpConsultarPro.Padding = new System.Windows.Forms.Padding(3);
+            this.tpConsultarPro.Size = new System.Drawing.Size(587, 349);
+            this.tpConsultarPro.TabIndex = 1;
+            this.tpConsultarPro.Text = "Consultar producto";
+            this.tpConsultarPro.UseVisualStyleBackColor = true;
+            this.tpConsultarPro.Click += new System.EventHandler(this.tpConsultarPro_Click);
             // 
             // GridProductos
             // 
@@ -236,6 +239,7 @@
             this.cbProductos2.Name = "cbProductos2";
             this.cbProductos2.Size = new System.Drawing.Size(342, 36);
             this.cbProductos2.TabIndex = 1;
+            this.cbProductos2.SelectedIndexChanged += new System.EventHandler(this.cbProductos2_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -247,17 +251,17 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Producto:";
             // 
-            // tabPage3
+            // tpModificarPro
             // 
-            this.tabPage3.Controls.Add(this.cbProducto);
-            this.tabPage3.Controls.Add(this.label7);
-            this.tabPage3.Location = new System.Drawing.Point(4, 24);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(587, 349);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Modificar producto";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.tpModificarPro.Controls.Add(this.cbProducto);
+            this.tpModificarPro.Controls.Add(this.label7);
+            this.tpModificarPro.Location = new System.Drawing.Point(4, 24);
+            this.tpModificarPro.Name = "tpModificarPro";
+            this.tpModificarPro.Padding = new System.Windows.Forms.Padding(3);
+            this.tpModificarPro.Size = new System.Drawing.Size(587, 349);
+            this.tpModificarPro.TabIndex = 2;
+            this.tpModificarPro.Text = "Modificar producto";
+            this.tpModificarPro.UseVisualStyleBackColor = true;
             // 
             // cbProducto
             // 
@@ -278,18 +282,18 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "Producto:";
             // 
-            // tabPage4
+            // tpEliminarPro
             // 
-            this.tabPage4.Controls.Add(this.cbProducto4);
-            this.tabPage4.Controls.Add(this.label8);
-            this.tabPage4.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tabPage4.Location = new System.Drawing.Point(4, 24);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(587, 349);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Eliminar producto";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.tpEliminarPro.Controls.Add(this.cbProducto4);
+            this.tpEliminarPro.Controls.Add(this.label8);
+            this.tpEliminarPro.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tpEliminarPro.Location = new System.Drawing.Point(4, 24);
+            this.tpEliminarPro.Name = "tpEliminarPro";
+            this.tpEliminarPro.Padding = new System.Windows.Forms.Padding(3);
+            this.tpEliminarPro.Size = new System.Drawing.Size(587, 349);
+            this.tpEliminarPro.TabIndex = 3;
+            this.tpEliminarPro.Text = "Eliminar producto";
+            this.tpEliminarPro.UseVisualStyleBackColor = true;
             // 
             // cbProducto4
             // 
@@ -313,20 +317,21 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.tcProductos3);
+            this.Controls.Add(this.tcProductos);
             this.Controls.Add(this.label1);
             this.Name = "FrProductos";
             this.Text = "FrProductos";
-            this.tcProductos3.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
+            this.Load += new System.EventHandler(this.FrProductos_Load);
+            this.tcProductos.ResumeLayout(false);
+            this.tpIngresarPro.ResumeLayout(false);
+            this.tpIngresarPro.PerformLayout();
+            this.tpConsultarPro.ResumeLayout(false);
+            this.tpConsultarPro.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridProductos)).EndInit();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
+            this.tpModificarPro.ResumeLayout(false);
+            this.tpModificarPro.PerformLayout();
+            this.tpEliminarPro.ResumeLayout(false);
+            this.tpEliminarPro.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -335,11 +340,11 @@
         #endregion
 
         private Label label1;
-        private TabControl tcProductos3;
-        private TabPage tabPage1;
-        private TabPage tabPage2;
-        private TabPage tabPage3;
-        private TabPage tabPage4;
+        private TabControl tcProductos;
+        private TabPage tpIngresarPro;
+        private TabPage tpConsultarPro;
+        private TabPage tpModificarPro;
+        private TabPage tpEliminarPro;
         private Button btnLimpiar;
         private Button btnGuardar;
         private TextBox txtCantidad;

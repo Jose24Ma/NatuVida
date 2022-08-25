@@ -1099,7 +1099,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "CapaEntidad": "1.0.0"
+          "CapaEntidad": "1.0.0",
+          "MySql.Data": "8.0.30"
         },
         "compile": {
           "bin/placeholder/CapaDatos.dll": {}
@@ -1114,6 +1115,9 @@
       "CapaEntidad/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "MySql.Data": "8.0.30"
+        },
         "compile": {
           "bin/placeholder/CapaEntidad.dll": {}
         },
@@ -1129,7 +1133,8 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "CapaDatos": "1.0.0",
-          "CapaEntidad": "1.0.0"
+          "CapaEntidad": "1.0.0",
+          "MySql.Data": "8.0.30"
         },
         "compile": {
           "bin/placeholder/CapaNegocio.dll": {}
