@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MI\\source\\repos\\NatuVida\\CapaEntidad\\CapaEntidad.csproj": {}
+    "C:\\Users\\MI\\Source\\Repos\\NatuVida\\CapaEntidad\\CapaEntidad.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MI\\source\\repos\\NatuVida\\CapaEntidad\\CapaEntidad.csproj": {
+    "C:\\Users\\MI\\Source\\Repos\\NatuVida\\CapaEntidad\\CapaEntidad.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MI\\source\\repos\\NatuVida\\CapaEntidad\\CapaEntidad.csproj",
+        "projectUniqueName": "C:\\Users\\MI\\Source\\Repos\\NatuVida\\CapaEntidad\\CapaEntidad.csproj",
         "projectName": "CapaEntidad",
-        "projectPath": "C:\\Users\\MI\\source\\repos\\NatuVida\\CapaEntidad\\CapaEntidad.csproj",
+        "projectPath": "C:\\Users\\MI\\Source\\Repos\\NatuVida\\CapaEntidad\\CapaEntidad.csproj",
         "packagesPath": "C:\\Users\\MI\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MI\\source\\repos\\NatuVida\\CapaEntidad\\obj\\",
+        "outputPath": "C:\\Users\\MI\\Source\\Repos\\NatuVida\\CapaEntidad\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MI\\AppData\\Roaming\\NuGet\\NuGet.Config",

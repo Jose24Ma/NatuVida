@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ckA4w8BbUqzTihnLk/481Pg2MUO6kI9bFdUCchTKpNb9MkSLJQAcAWu98YKzs5wIauv84JfOQos9IZDlkUNiww==",
+  "dgSpecHash": "Ftub0tQTmPJLeXfcxu/ny/1mARqaUDf371kbNyfMW4VytVMZtDsVIMt4FxkcEDegw0S4bZXb29jS13lkigYvHA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\MI\\source\\repos\\NatuVida\\CapaNegocio\\CapaNegocio.csproj",
+  "projectFilePath": "C:\\Users\\MI\\Source\\Repos\\NatuVida\\CapaNegocio\\CapaNegocio.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MI\\.nuget\\packages\\google.protobuf\\3.19.4\\google.protobuf.3.19.4.nupkg.sha512",
     "C:\\Users\\MI\\.nuget\\packages\\k4os.compression.lz4\\1.2.6\\k4os.compression.lz4.1.2.6.nupkg.sha512",

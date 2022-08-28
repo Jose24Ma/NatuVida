@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zVyf0Giwfn0H3tyAUD4JZbKqLjftN1eO6MdbCenMAxwBY3EhHDSMru27MASDP+oGw8kPJZgFtSjT9z3W1acTPQ==",
+  "dgSpecHash": "iF3LdJwjfMF0yrrc7MYPFzpqoDPLPf6t4Ts+CAQC7H+N6k4gImsuefxpgTQRUBTJW66Zjhx8zQ7CkNNI0aaVLw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\MI\\source\\repos\\NatuVida\\CapaPresentacion\\CapaPresentacion.csproj",
+  "projectFilePath": "C:\\Users\\MI\\Source\\Repos\\NatuVida\\CapaPresentacion\\CapaPresentacion.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MI\\.nuget\\packages\\azure.core\\1.20.0\\azure.core.1.20.0.nupkg.sha512",
     "C:\\Users\\MI\\.nuget\\packages\\azure.identity\\1.5.0\\azure.identity.1.5.0.nupkg.sha512",

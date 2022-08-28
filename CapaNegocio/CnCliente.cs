@@ -7,13 +7,16 @@ namespace CapaNegocio
 {
     public class CnCliente
     {
-
         CdCliente cdCliente = new CdCliente();
             
         public void CrearProducto(CeCliente CrearProducto)
         {
             cdCliente.InsertarProducto(CrearProducto);
         }
-        
+
+        public DataTable ObtenerDatosPro()
+        {
+            return cdCliente.Leer();
+        }
     }
 }

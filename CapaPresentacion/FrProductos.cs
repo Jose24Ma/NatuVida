@@ -1,5 +1,6 @@
 ﻿using CapaEntidad;
 using CapaNegocio;
+using CapaDatos;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 
@@ -10,6 +11,7 @@ namespace CapaPresentacion
     {
         CnCliente cnCliente = new CnCliente();
         CeCliente ceCliente = new CeCliente();
+
         public FrProductos()
         {
             InitializeComponent();
@@ -53,18 +55,12 @@ namespace CapaPresentacion
             ceCliente.proDescripcion = txtDescripcion.Text;
             ceCliente.proCantidad = Convert.ToInt32(txtCantidad.Text);
             ceCliente.proValor = Convert.ToInt32((txtValor.Text));
-            bool resultado;
-            resultado = ValidarDatos();
-            if (resultado == false)
-            {
-                return;
-            }
             cnCliente.CrearProducto(ceCliente);
+            ValidarDatos();
             LimpiarForm();
         }
         private void cbProductos2_SelectedIndexChanged(object sender, EventArgs e) { }
         private void tpConsultarPro_Click(object sender, EventArgs e) { }
-
         private void FrProductos_Load(object sender, EventArgs e)
         {
             MySqlConnection connection = new MySqlConnection("Server=Localhost;User=root;Password=admin;Port=3306;Database=naturvida;");
@@ -76,7 +72,25 @@ namespace CapaPresentacion
             {
                 cbProductos2.Items.Add(Adaptador["proDescripcion"].ToString());
             }
-            connection.Close();
+            connection.Close();           
         }
+        private void CargarDatosPro()
+        {
+            GridProductos.DataSource = cnCliente.ObtenerDatosPro();
+        }
+       
+        private void GridProductos_CellDoubleClick(object sender, DataGridViewAutoSizeModeEventArgs e)
+        {
+            txtCodigo.Text = GridProductos.CurrentRow.Cells["proCodigo"].Value.ToString();
+            txtDescripcion.Text = GridProductos.CurrentRow.Cells["proDescripcion"].Value.ToString();
+            txtCantidad.Text = GridProductos.CurrentRow.Cells["proCantidad"].Value.ToString();
+            txtValor.Text = GridProductos.CurrentRow.Cells["proValor"].Value.ToString();
+        }
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            GridProductos.Rows.ToString();
+            CargarDatosPro();
+        }
+
     }
 }

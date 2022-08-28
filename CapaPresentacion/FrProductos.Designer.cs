@@ -230,6 +230,7 @@
             this.btnConsultar.TabIndex = 2;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = false;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // cbProductos2
             // 
@@ -267,7 +268,7 @@
             // 
             this.cbProducto.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbProducto.FormattingEnabled = true;
-            this.cbProducto.Location = new System.Drawing.Point(173, 60);
+            this.cbProducto.Location = new System.Drawing.Point(163, 22);
             this.cbProducto.Name = "cbProducto";
             this.cbProducto.Size = new System.Drawing.Size(332, 36);
             this.cbProducto.TabIndex = 1;
@@ -276,7 +277,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(36, 59);
+            this.label7.Location = new System.Drawing.Point(26, 22);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(131, 37);
             this.label7.TabIndex = 0;
