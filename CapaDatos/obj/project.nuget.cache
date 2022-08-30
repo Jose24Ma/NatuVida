@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ErbYSMPESODMJeIzv44sXkAym8qGS8I+rBCz681R8Payr508ECclC9D7+8exc7sVZyA0eRwj+H/Q/EWX54X+vw==",
+  "dgSpecHash": "nLh8/XSNdbIcZyZR5cBHBjE9Rk1/rDhAU8PgKG29newyYuERs6K9WlqLi5hX8hE8rPtbyY4k6/Dy9c7tiR2m2g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\MI\\Source\\Repos\\NatuVida\\CapaDatos\\CapaDatos.csproj",
+  "projectFilePath": "C:\\Users\\MI\\source\\repos\\NatuVida\\CapaDatos\\CapaDatos.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MI\\.nuget\\packages\\google.protobuf\\3.19.4\\google.protobuf.3.19.4.nupkg.sha512",
     "C:\\Users\\MI\\.nuget\\packages\\k4os.compression.lz4\\1.2.6\\k4os.compression.lz4.1.2.6.nupkg.sha512",

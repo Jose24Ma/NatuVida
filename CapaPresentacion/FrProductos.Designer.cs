@@ -47,9 +47,20 @@
             this.cbProductos2 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.tpModificarPro = new System.Windows.Forms.TabPage();
+            this.txtCantidadMod = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.btnGuardarPro = new System.Windows.Forms.Button();
+            this.txtValorMod = new System.Windows.Forms.TextBox();
+            this.txtDescripcionMod = new System.Windows.Forms.TextBox();
+            this.txtCodigoMod = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.btnConsultarProMod = new System.Windows.Forms.Button();
             this.cbProducto = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.tpEliminarPro = new System.Windows.Forms.TabPage();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.cbProducto4 = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.tcProductos.SuspendLayout();
@@ -254,6 +265,16 @@
             // 
             // tpModificarPro
             // 
+            this.tpModificarPro.Controls.Add(this.txtCantidadMod);
+            this.tpModificarPro.Controls.Add(this.label12);
+            this.tpModificarPro.Controls.Add(this.btnGuardarPro);
+            this.tpModificarPro.Controls.Add(this.txtValorMod);
+            this.tpModificarPro.Controls.Add(this.txtDescripcionMod);
+            this.tpModificarPro.Controls.Add(this.txtCodigoMod);
+            this.tpModificarPro.Controls.Add(this.label11);
+            this.tpModificarPro.Controls.Add(this.label10);
+            this.tpModificarPro.Controls.Add(this.label9);
+            this.tpModificarPro.Controls.Add(this.btnConsultarProMod);
             this.tpModificarPro.Controls.Add(this.cbProducto);
             this.tpModificarPro.Controls.Add(this.label7);
             this.tpModificarPro.Location = new System.Drawing.Point(4, 24);
@@ -263,6 +284,102 @@
             this.tpModificarPro.TabIndex = 2;
             this.tpModificarPro.Text = "Modificar producto";
             this.tpModificarPro.UseVisualStyleBackColor = true;
+            // 
+            // txtCantidadMod
+            // 
+            this.txtCantidadMod.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtCantidadMod.Location = new System.Drawing.Point(188, 265);
+            this.txtCantidadMod.Name = "txtCantidadMod";
+            this.txtCantidadMod.Size = new System.Drawing.Size(246, 29);
+            this.txtCantidadMod.TabIndex = 12;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label12.Location = new System.Drawing.Point(87, 266);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(95, 28);
+            this.label12.TabIndex = 11;
+            this.label12.Text = "Cantidad:";
+            // 
+            // btnGuardarPro
+            // 
+            this.btnGuardarPro.BackColor = System.Drawing.Color.Teal;
+            this.btnGuardarPro.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnGuardarPro.Location = new System.Drawing.Point(230, 300);
+            this.btnGuardarPro.Name = "btnGuardarPro";
+            this.btnGuardarPro.Size = new System.Drawing.Size(144, 32);
+            this.btnGuardarPro.TabIndex = 10;
+            this.btnGuardarPro.Text = "Guardar Cambios";
+            this.btnGuardarPro.UseVisualStyleBackColor = false;
+            this.btnGuardarPro.Click += new System.EventHandler(this.btnGuardarPro_Click);
+            // 
+            // txtValorMod
+            // 
+            this.txtValorMod.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtValorMod.Location = new System.Drawing.Point(188, 215);
+            this.txtValorMod.Name = "txtValorMod";
+            this.txtValorMod.Size = new System.Drawing.Size(246, 29);
+            this.txtValorMod.TabIndex = 9;
+            // 
+            // txtDescripcionMod
+            // 
+            this.txtDescripcionMod.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtDescripcionMod.Location = new System.Drawing.Point(188, 162);
+            this.txtDescripcionMod.Name = "txtDescripcionMod";
+            this.txtDescripcionMod.Size = new System.Drawing.Size(246, 29);
+            this.txtDescripcionMod.TabIndex = 8;
+            // 
+            // txtCodigoMod
+            // 
+            this.txtCodigoMod.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtCodigoMod.Location = new System.Drawing.Point(188, 113);
+            this.txtCodigoMod.Name = "txtCodigoMod";
+            this.txtCodigoMod.Size = new System.Drawing.Size(246, 29);
+            this.txtCodigoMod.TabIndex = 7;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label11.Location = new System.Drawing.Point(120, 216);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(62, 28);
+            this.label11.TabIndex = 6;
+            this.label11.Text = "Valor:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label10.Location = new System.Drawing.Point(64, 163);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(118, 28);
+            this.label10.TabIndex = 5;
+            this.label10.Text = "Descripcion:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label9.Location = new System.Drawing.Point(101, 114);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(81, 28);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "Codigo:";
+            // 
+            // btnConsultarProMod
+            // 
+            this.btnConsultarProMod.BackColor = System.Drawing.Color.Teal;
+            this.btnConsultarProMod.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnConsultarProMod.Location = new System.Drawing.Point(250, 75);
+            this.btnConsultarProMod.Name = "btnConsultarProMod";
+            this.btnConsultarProMod.Size = new System.Drawing.Size(93, 32);
+            this.btnConsultarProMod.TabIndex = 3;
+            this.btnConsultarProMod.Text = "Consultar";
+            this.btnConsultarProMod.UseVisualStyleBackColor = false;
+            this.btnConsultarProMod.Click += new System.EventHandler(this.btnConsultarProMod_Click);
             // 
             // cbProducto
             // 
@@ -285,6 +402,7 @@
             // 
             // tpEliminarPro
             // 
+            this.tpEliminarPro.Controls.Add(this.btnEliminar);
             this.tpEliminarPro.Controls.Add(this.cbProducto4);
             this.tpEliminarPro.Controls.Add(this.label8);
             this.tpEliminarPro.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -296,10 +414,22 @@
             this.tpEliminarPro.Text = "Eliminar producto";
             this.tpEliminarPro.UseVisualStyleBackColor = true;
             // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.Teal;
+            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnEliminar.Location = new System.Drawing.Point(250, 113);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(118, 28);
+            this.btnEliminar.TabIndex = 2;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
             // cbProducto4
             // 
             this.cbProducto4.FormattingEnabled = true;
-            this.cbProducto4.Location = new System.Drawing.Point(172, 50);
+            this.cbProducto4.Location = new System.Drawing.Point(172, 29);
             this.cbProducto4.Name = "cbProducto4";
             this.cbProducto4.Size = new System.Drawing.Size(332, 45);
             this.cbProducto4.TabIndex = 1;
@@ -307,7 +437,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(35, 58);
+            this.label8.Location = new System.Drawing.Point(35, 37);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(131, 37);
             this.label8.TabIndex = 0;
@@ -358,11 +488,22 @@
         private Label label2;
         private ComboBox cbProductos2;
         private Label label6;
-        private DataGridView GridProductos;
         private Button btnConsultar;
         private Label label7;
         private ComboBox cbProducto;
         private ComboBox cbProducto4;
         private Label label8;
+        private Button btnConsultarProMod;
+        private DataGridView GridProductos;
+        private Button btnGuardarPro;
+        private TextBox txtValorMod;
+        private TextBox txtDescripcionMod;
+        private TextBox txtCodigoMod;
+        private Label label11;
+        private Label label10;
+        private Label label9;
+        private Button btnEliminar;
+        private TextBox txtCantidadMod;
+        private Label label12;
     }
 }

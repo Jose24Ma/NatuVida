@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MI\\Source\\Repos\\NatuVida\\CapaNegocio\\CapaNegocio.csproj": {}
+    "C:\\Users\\MI\\source\\repos\\NatuVida\\CapaNegocio\\CapaNegocio.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MI\\Source\\Repos\\NatuVida\\CapaDatos\\CapaDatos.csproj": {
+    "C:\\Users\\MI\\source\\repos\\NatuVida\\CapaDatos\\CapaDatos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MI\\Source\\Repos\\NatuVida\\CapaDatos\\CapaDatos.csproj",
+        "projectUniqueName": "C:\\Users\\MI\\source\\repos\\NatuVida\\CapaDatos\\CapaDatos.csproj",
         "projectName": "CapaDatos",
-        "projectPath": "C:\\Users\\MI\\Source\\Repos\\NatuVida\\CapaDatos\\CapaDatos.csproj",
+        "projectPath": "C:\\Users\\MI\\source\\repos\\NatuVida\\CapaDatos\\CapaDatos.csproj",
         "packagesPath": "C:\\Users\\MI\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MI\\Source\\Repos\\NatuVida\\CapaDatos\\obj\\",
+        "outputPath": "C:\\Users\\MI\\source\\repos\\NatuVida\\CapaDatos\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MI\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "C:\\Users\\MI\\Source\\Repos\\NatuVida\\CapaEntidad\\CapaEntidad.csproj": {
-                "projectPath": "C:\\Users\\MI\\Source\\Repos\\NatuVida\\CapaEntidad\\CapaEntidad.csproj"
+              "C:\\Users\\MI\\source\\repos\\NatuVida\\CapaEntidad\\CapaEntidad.csproj": {
+                "projectPath": "C:\\Users\\MI\\source\\repos\\NatuVida\\CapaEntidad\\CapaEntidad.csproj"
               }
             }
           }
@@ -72,12 +72,12 @@
         }
       }
     },
-    "C:\\Users\\MI\\Source\\Repos\\NatuVida\\CapaEntidad\\CapaEntidad.csproj": {
+    "C:\\Users\\MI\\source\\repos\\NatuVida\\CapaEntidad\\CapaEntidad.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MI\\Source\\Repos\\NatuVida\\CapaEntidad\\CapaEntidad.csproj",
+        "projectUniqueName": "C:\\Users\\MI\\source\\repos\\NatuVida\\CapaEntidad\\CapaEntidad.csproj",
         "projectName": "CapaEntidad",
-        "projectPath": "C:\\Users\\MI\\Source\\Repos\\NatuVida\\CapaEntidad\\CapaEntidad.csproj",
+        "projectPath": "C:\\Users\\MI\\source\\repos\\NatuVida\\CapaEntidad\\CapaEntidad.csproj",
         "packagesPath": "C:\\Users\\MI\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\MI\\Source\\Repos\\NatuVida\\CapaEntidad\\obj\\",
         "projectStyle": "PackageReference",
@@ -136,14 +136,14 @@
         }
       }
     },
-    "C:\\Users\\MI\\Source\\Repos\\NatuVida\\CapaNegocio\\CapaNegocio.csproj": {
+    "C:\\Users\\MI\\source\\repos\\NatuVida\\CapaNegocio\\CapaNegocio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MI\\Source\\Repos\\NatuVida\\CapaNegocio\\CapaNegocio.csproj",
+        "projectUniqueName": "C:\\Users\\MI\\source\\repos\\NatuVida\\CapaNegocio\\CapaNegocio.csproj",
         "projectName": "CapaNegocio",
-        "projectPath": "C:\\Users\\MI\\Source\\Repos\\NatuVida\\CapaNegocio\\CapaNegocio.csproj",
+        "projectPath": "C:\\Users\\MI\\source\\repos\\NatuVida\\CapaNegocio\\CapaNegocio.csproj",
         "packagesPath": "C:\\Users\\MI\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MI\\Source\\Repos\\NatuVida\\CapaNegocio\\obj\\",
+        "outputPath": "C:\\Users\\MI\\source\\repos\\NatuVida\\CapaNegocio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MI\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -160,11 +160,11 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "C:\\Users\\MI\\Source\\Repos\\NatuVida\\CapaDatos\\CapaDatos.csproj": {
-                "projectPath": "C:\\Users\\MI\\Source\\Repos\\NatuVida\\CapaDatos\\CapaDatos.csproj"
+              "C:\\Users\\MI\\source\\repos\\NatuVida\\CapaDatos\\CapaDatos.csproj": {
+                "projectPath": "C:\\Users\\MI\\source\\repos\\NatuVida\\CapaDatos\\CapaDatos.csproj"
               },
-              "C:\\Users\\MI\\Source\\Repos\\NatuVida\\CapaEntidad\\CapaEntidad.csproj": {
-                "projectPath": "C:\\Users\\MI\\Source\\Repos\\NatuVida\\CapaEntidad\\CapaEntidad.csproj"
+              "C:\\Users\\MI\\source\\repos\\NatuVida\\CapaEntidad\\CapaEntidad.csproj": {
+                "projectPath": "C:\\Users\\MI\\source\\repos\\NatuVida\\CapaEntidad\\CapaEntidad.csproj"
               }
             }
           }
