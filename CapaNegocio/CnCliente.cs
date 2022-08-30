@@ -7,7 +7,7 @@ namespace CapaNegocio
 {
     public class CnCliente
     {
-        CdCliente cdCliente = new CdCliente();   
+        CdCliente cdCliente = new CdCliente();
         public void CrearProducto(CeCliente CrearProducto)
         {
             cdCliente.InsertarProducto(CrearProducto);
@@ -23,6 +23,24 @@ namespace CapaNegocio
         public void EliminarProducto(CeCliente EliminarProducto)
         {
             cdCliente.Eliminar(EliminarProducto);
+        }
+
+
+        public void CrearCliente(CeCliente CrearCliente)
+        {
+            cdCliente.InsertarCliente(CrearCliente);
+        }
+        public DataTable ObtenerDatosCli()
+        {
+            return cdCliente.LeerCli();
+        }
+        public void ActualizarCliente(CeCliente ActualizarCliente)
+        {
+            cdCliente.ActualizarCli(ActualizarCliente);
+        }
+        public void EliminarCliente(CeCliente EliminarCliente)
+        {
+            cdCliente.EliminarCli(EliminarCliente);
         }
     }
 }

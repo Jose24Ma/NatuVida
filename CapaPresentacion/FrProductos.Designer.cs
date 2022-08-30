@@ -61,8 +61,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.tpEliminarPro = new System.Windows.Forms.TabPage();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.cbProducto4 = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.cbProducto4 = new System.Windows.Forms.ComboBox();
             this.tcProductos.SuspendLayout();
             this.tpIngresarPro.SuspendLayout();
             this.tpConsultarPro.SuspendLayout();
@@ -183,7 +183,7 @@
             this.label4.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.Location = new System.Drawing.Point(98, 132);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 28);
+            this.label4.Size = new System.Drawing.Size(61, 28);
             this.label4.TabIndex = 2;
             this.label4.Text = "Valor:";
             // 
@@ -345,7 +345,7 @@
             this.label11.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label11.Location = new System.Drawing.Point(120, 216);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(62, 28);
+            this.label11.Size = new System.Drawing.Size(61, 28);
             this.label11.TabIndex = 6;
             this.label11.Text = "Valor:";
             // 
@@ -403,8 +403,8 @@
             // tpEliminarPro
             // 
             this.tpEliminarPro.Controls.Add(this.btnEliminar);
-            this.tpEliminarPro.Controls.Add(this.cbProducto4);
             this.tpEliminarPro.Controls.Add(this.label8);
+            this.tpEliminarPro.Controls.Add(this.cbProducto4);
             this.tpEliminarPro.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tpEliminarPro.Location = new System.Drawing.Point(4, 24);
             this.tpEliminarPro.Name = "tpEliminarPro";
@@ -426,14 +426,6 @@
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // cbProducto4
-            // 
-            this.cbProducto4.FormattingEnabled = true;
-            this.cbProducto4.Location = new System.Drawing.Point(172, 29);
-            this.cbProducto4.Name = "cbProducto4";
-            this.cbProducto4.Size = new System.Drawing.Size(332, 45);
-            this.cbProducto4.TabIndex = 1;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -442,6 +434,15 @@
             this.label8.Size = new System.Drawing.Size(131, 37);
             this.label8.TabIndex = 0;
             this.label8.Text = "Producto:";
+            // 
+            // cbProducto4
+            // 
+            this.cbProducto4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbProducto4.FormattingEnabled = true;
+            this.cbProducto4.Location = new System.Drawing.Point(172, 45);
+            this.cbProducto4.Name = "cbProducto4";
+            this.cbProducto4.Size = new System.Drawing.Size(369, 29);
+            this.cbProducto4.TabIndex = 1;
             // 
             // FrProductos
             // 

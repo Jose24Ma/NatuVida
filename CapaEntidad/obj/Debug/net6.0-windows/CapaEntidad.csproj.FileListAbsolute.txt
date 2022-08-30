@@ -22,3 +22,15 @@ C:\Users\MI\Source\Repos\NatuVida\CapaEntidad\obj\Debug\net6.0-windows\CapaEntid
 C:\Users\MI\Source\Repos\NatuVida\CapaEntidad\obj\Debug\net6.0-windows\refint\CapaEntidad.dll
 C:\Users\MI\Source\Repos\NatuVida\CapaEntidad\obj\Debug\net6.0-windows\CapaEntidad.pdb
 C:\Users\MI\Source\Repos\NatuVida\CapaEntidad\obj\Debug\net6.0-windows\ref\CapaEntidad.dll
+C:\Users\Sena\Source\Repos\NatuVida\CapaEntidad\bin\Debug\net6.0-windows\CapaEntidad.deps.json
+C:\Users\Sena\Source\Repos\NatuVida\CapaEntidad\bin\Debug\net6.0-windows\CapaEntidad.dll
+C:\Users\Sena\Source\Repos\NatuVida\CapaEntidad\bin\Debug\net6.0-windows\CapaEntidad.pdb
+C:\Users\Sena\Source\Repos\NatuVida\CapaEntidad\obj\Debug\net6.0-windows\CapaEntidad.csproj.AssemblyReference.cache
+C:\Users\Sena\Source\Repos\NatuVida\CapaEntidad\obj\Debug\net6.0-windows\CapaEntidad.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sena\Source\Repos\NatuVida\CapaEntidad\obj\Debug\net6.0-windows\CapaEntidad.AssemblyInfoInputs.cache
+C:\Users\Sena\Source\Repos\NatuVida\CapaEntidad\obj\Debug\net6.0-windows\CapaEntidad.AssemblyInfo.cs
+C:\Users\Sena\Source\Repos\NatuVida\CapaEntidad\obj\Debug\net6.0-windows\CapaEntidad.csproj.CoreCompileInputs.cache
+C:\Users\Sena\Source\Repos\NatuVida\CapaEntidad\obj\Debug\net6.0-windows\CapaEntidad.dll
+C:\Users\Sena\Source\Repos\NatuVida\CapaEntidad\obj\Debug\net6.0-windows\refint\CapaEntidad.dll
+C:\Users\Sena\Source\Repos\NatuVida\CapaEntidad\obj\Debug\net6.0-windows\CapaEntidad.pdb
+C:\Users\Sena\Source\Repos\NatuVida\CapaEntidad\obj\Debug\net6.0-windows\ref\CapaEntidad.dll

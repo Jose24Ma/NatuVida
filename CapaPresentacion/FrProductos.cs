@@ -69,14 +69,14 @@ namespace CapaPresentacion
         {
             MySqlConnection connection = new MySqlConnection("Server=Localhost;User=root;Password=admin;Port=3306;Database=naturvida;");
             connection.Open();
-            string Query = "SELECT `proDescripcion` FROM tbl_productos ";
+            string Query = "SELECT `proDescripcion`,`proCodigo` FROM tbl_productos  ";
             MySqlCommand command = new MySqlCommand(Query, connection);
             MySqlDataReader Adaptador = command.ExecuteReader();
             while (Adaptador.Read())
             {
                 cbProductos2.Items.Add(Adaptador["proDescripcion"].ToString());
                 cbProducto.Items.Add(Adaptador["proDescripcion"].ToString());
-                cbProducto4.Items.Add(Adaptador["proDescripcion"].ToString());
+                cbProducto4.Items.Add(Adaptador["proCodigo"].ToString());
             }
             connection.Close();  
         }
@@ -123,15 +123,12 @@ namespace CapaPresentacion
         }
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            MySqlConnection mySqlConnection = new MySqlConnection("Server=Localhost;User=root;Password=admin;Port=3306;Database=naturvida;");
-            mySqlConnection.Open();
-            string Query = "SELECT * FROM tbl_productos WHERE proDescripcion = @Des;";
-            MySqlCommand command = new MySqlCommand(Query, mySqlConnection);
-            command.Parameters.AddWithValue("@Des", cbProducto4.Text);
-            MySqlDataReader Adaptador = command.ExecuteReader();
-            while (Adaptador.Read())
+            
+            if (MessageBox.Show("¿Desea eliminar el registro?", "Titulo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                cnCliente.EliminarProducto(ceCliente);
+                    ceCliente.proCodigo = Convert.ToInt32(cbProducto4.Text.ToString());
+                    cnCliente.EliminarProducto(ceCliente);
+                    CargarDatosPro();    
             }
         }
     }
