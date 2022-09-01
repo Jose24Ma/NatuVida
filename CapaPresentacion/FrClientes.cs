@@ -30,6 +30,12 @@ namespace CapaPresentacion
             txtDireccion.Text = string.Empty;
             txtCorreo.Text = string.Empty;
             txtTelefono.Text = string.Empty;
+
+            txtDocumentoCli.Text = string.Empty;
+            txtNombreCli.Text = string.Empty;
+            txtDireccionCli.Text = string.Empty;
+            txtCorreoCli.Text = string.Empty;
+            txtTelefonoCli.Text = string.Empty;
         }
         private void btnLimpiarCli_Click(object sender, EventArgs e)
         {
@@ -111,6 +117,7 @@ namespace CapaPresentacion
             {
                 ceCliente.cliDocumento = Convert.ToInt32(cbClienteEliminar.Text.ToString());
                 cnCliente.EliminarCliente(ceCliente);
+                cbClienteEliminar.Text = string.Empty;
                 CargarDatosCli();
             }
         }
