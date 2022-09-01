@@ -63,7 +63,7 @@
             this.label1.ForeColor = System.Drawing.Color.Teal;
             this.label1.Location = new System.Drawing.Point(258, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(153, 37);
+            this.label1.Size = new System.Drawing.Size(152, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "Facturación";
             // 
@@ -123,7 +123,7 @@
             this.label7.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label7.Location = new System.Drawing.Point(306, 374);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(129, 28);
+            this.label7.Size = new System.Drawing.Size(126, 28);
             this.label7.TabIndex = 6;
             this.label7.Text = "Total Factura:";
             // 
@@ -249,6 +249,7 @@
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(177, 29);
             this.txtValor.TabIndex = 18;
+            this.txtValor.TextChanged += new System.EventHandler(this.txtValor_TextChanged);
             // 
             // label8
             // 
@@ -256,7 +257,7 @@
             this.label8.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label8.Location = new System.Drawing.Point(365, 104);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(62, 28);
+            this.label8.Size = new System.Drawing.Size(61, 28);
             this.label8.TabIndex = 19;
             this.label8.Text = "Valor:";
             // 
@@ -274,7 +275,7 @@
             this.label9.Font = new System.Drawing.Font("Segoe UI Light", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label9.Location = new System.Drawing.Point(336, 160);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(99, 28);
+            this.label9.Size = new System.Drawing.Size(98, 28);
             this.label9.TabIndex = 21;
             this.label9.Text = "Vendedor:";
             // 

@@ -53,6 +53,7 @@ namespace CapaPresentacion
             connection.Open();
             string Query = "SELECT `proDescripcion`,`proCodigo` FROM tbl_productos";
             MySqlCommand command = new MySqlCommand(Query, connection);
+            //command.Parameters.AddWithValue("@proCodigo", cbProducto4.Text);
             MySqlDataReader Adaptador = command.ExecuteReader();
             while (Adaptador.Read())
             {

@@ -125,5 +125,9 @@ namespace CapaPresentacion
         
         private void GridFactura_CellContentClick(object sender, DataGridViewCellEventArgs e) { }// Accion sin usar
 
+        private void txtValor_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
