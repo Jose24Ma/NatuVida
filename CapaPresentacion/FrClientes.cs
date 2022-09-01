@@ -22,6 +22,7 @@ namespace CapaPresentacion
             InitializeComponent();
         }
 
+        //Ingresar Cliente
         private void LimpiarFormCli()
         {
             txtDocumento.Text = string.Empty;
@@ -44,6 +45,8 @@ namespace CapaPresentacion
             cnCliente.CrearCliente(ceCliente);
             LimpiarFormCli();
         }
+
+        //Consular Cliente
         private void tpConsultarCli_Click(object sender, EventArgs e)
         {
             cnCliente.ObtenerDatosCli();
@@ -51,17 +54,18 @@ namespace CapaPresentacion
         private void CargarDatosCli()
         {
             GridDatosCli.DataSource = cnCliente.ObtenerDatosCli();
-
         }
         private void btnConsultarCli_Click(object sender, EventArgs e)
         {
             CargarDatosCli();
         }
+
+        //Modificar Cliente
         private void FrClientes_Load(object sender, EventArgs e)
         {
             MySqlConnection connection = new MySqlConnection("Server=Localhost;User=root;Password=admin;Port=3306;Database=naturvida;");
             connection.Open();
-            string Query = "SELECT `cliNombre` FROM tbl_cliente  ";
+            string Query = "SELECT `cliNombre`,`cliDocumento` FROM tbl_clientes";
             MySqlCommand command = new MySqlCommand(Query, connection);
             MySqlDataReader Adaptador = command.ExecuteReader();
             while (Adaptador.Read())
@@ -72,12 +76,11 @@ namespace CapaPresentacion
             }
             connection.Close();
         }
-
         private void btnConsularCli_Click(object sender, EventArgs e)
         {
             MySqlConnection mySqlConnection = new MySqlConnection("Server=Localhost;User=root;Password=admin;Port=3306;Database=naturvida;");
             mySqlConnection.Open();
-            string Query = "SELECT * FROM tbl_cliente WHERE proDescripcion = @Des;";
+            string Query = "SELECT * FROM tbl_clientes WHERE cliNombre = @Des;";
             MySqlCommand command = new MySqlCommand(Query, mySqlConnection);
             command.Parameters.AddWithValue("@Des", cbClienteModificar.Text);
             MySqlDataReader Adaptador = command.ExecuteReader();
@@ -87,11 +90,29 @@ namespace CapaPresentacion
                 txtNombreCli.Text = Adaptador["cliNombre"].ToString();
                 txtDireccionCli.Text = Adaptador["cliDireccion"].ToString();
                 txtCorreoCli.Text = Adaptador["cliCorreo"].ToString();
-                txtTelefono.Text = Adaptador["cliTelefono"].ToString();
-                txtTelefono.Text = Adaptador["cliTelefono"].ToString();
+                txtTelefonoCli.Text = Adaptador["cliTelefono"].ToString();
             }
         }
-    }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ceCliente.cliDocumento = Convert.ToInt32(txtDocumentoCli.Text);
+            ceCliente.cliNombre = txtNombreCli.Text;
+            ceCliente.cliDireccion = txtDireccionCli.Text;
+            ceCliente.cliTelefono = txtTelefonoCli.Text;
+            ceCliente.cliCorreo = txtCorreoCli.Text;
+            cnCliente.ActualizarCliente(ceCliente);
+            LimpiarFormCli();
+        }
 
-    
+        //Eliminar Cliente
+        private void btnEliminarCli_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Desea eliminar el registro?", "Titulo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                ceCliente.cliDocumento = Convert.ToInt32(cbClienteEliminar.Text.ToString());
+                cnCliente.EliminarCliente(ceCliente);
+                CargarDatosCli();
+            }
+        }
+    }   
 }

@@ -14,6 +14,8 @@ namespace CapaPresentacion
         {
             InitializeComponent();
         }
+
+        //Ingresar Producto
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             LimpiarForm();
@@ -29,27 +31,6 @@ namespace CapaPresentacion
             txtValorMod.Text = string.Empty;
             txtDescripcionMod.Text = string.Empty;
         }
-        public bool ValidarDatos()
-        {
-            bool resultado = true;
-            if (string.IsNullOrWhiteSpace(txtCodigo.Text))
-            {
-                MessageBox.Show("Codigo es un campo obligatorio");
-            }
-            if (string.IsNullOrWhiteSpace(txtDescripcion.Text))
-            {
-                MessageBox.Show("Descripcion es un campo obligatorio");
-            }
-            if (string.IsNullOrWhiteSpace(txtCantidad.Text))
-            {
-                MessageBox.Show("Cantidad es un campo obligatorio");
-            }
-            if (string.IsNullOrWhiteSpace(txtValor.Text))
-            {
-                MessageBox.Show("Valor es un campo obligatorio");
-            }
-            return resultado;
-        }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             ceCliente.proCodigo = Convert.ToInt32(txtCodigo.Text);
@@ -57,10 +38,11 @@ namespace CapaPresentacion
             ceCliente.proCantidad = Convert.ToInt32(txtCantidad.Text);
             ceCliente.proValor = Convert.ToInt32(txtValor.Text);
             cnCliente.CrearProducto(ceCliente);
-            ValidarDatos();
             LimpiarForm();
         }
-        private void cbProductos2_SelectedIndexChanged(object sender, EventArgs e) { }
+        private void cbProductos2_SelectedIndexChanged(object sender, EventArgs e) { } // Accion de Herramienta sin uso
+
+        //Consultar Producto
         private void tpConsultarPro_Click(object sender, EventArgs e) 
         {
             cnCliente.ObtenerDatosPro();
@@ -69,7 +51,7 @@ namespace CapaPresentacion
         {
             MySqlConnection connection = new MySqlConnection("Server=Localhost;User=root;Password=admin;Port=3306;Database=naturvida;");
             connection.Open();
-            string Query = "SELECT `proDescripcion`,`proCodigo` FROM tbl_productos  ";
+            string Query = "SELECT `proDescripcion`,`proCodigo` FROM tbl_productos";
             MySqlCommand command = new MySqlCommand(Query, connection);
             MySqlDataReader Adaptador = command.ExecuteReader();
             while (Adaptador.Read())
@@ -96,6 +78,8 @@ namespace CapaPresentacion
         {
             CargarDatosPro();
         }
+
+        //Modificar Producto
         private void btnConsultarProMod_Click(object sender, EventArgs e)
         {
             MySqlConnection mySqlConnection = new MySqlConnection("Server=Localhost;User=root;Password=admin;Port=3306;Database=naturvida;");
@@ -121,9 +105,10 @@ namespace CapaPresentacion
                 cnCliente.ActualizarProducto(ceCliente);
                 LimpiarForm();
         }
+
+        //Eliminar Producto
         private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            
+        {           
             if (MessageBox.Show("¿Desea eliminar el registro?", "Titulo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                     ceCliente.proCodigo = Convert.ToInt32(cbProducto4.Text.ToString());

@@ -1,0 +1,28 @@
+Querys Crud
+
+--------TBL_PRODUCTOS--------
+SELECT * FROM naturvida.tbl_productos;
+
+
+INSERT INTO `naturvida`.`tbl_productos` (`proCodigo`, `proDescripcion`, `proValor`, `proCantidad`) VALUES ('1', 'DESCRIPCION', '12345', '12345');
+
+
+UPDATE `naturvida`.`tbl_productos` SET `proDescripcion` = 'DESCRIPCION1', `proValor` = '123454', `proCantidad` = '123454' WHERE (`proCodigo` = '1');
+
+
+DELETE FROM `naturvida`.`tbl_productos` WHERE (`proCodigo` = '1');
+--------TBL_PRODUCTOS--------
+
+--------TBL_CLIENTES--------
+SELECT * FROM naturvida.tbl_clientes;
+
+
+INSERT INTO `naturvida`.`tbl_clientes` (`cliNombre`, `cliDocumento`, `cliDireccion`, `cliCorreo`, `cliTelefono`) VALUES ('NOMBRE', '12345', 'DIRECCION', 'CORREO', 'TELEFONO');
+
+
+UPDATE `naturvida`.`tbl_clientes` SET `cliNombre` = 'NOMBRE1', `cliDocumento` = '123456', `cliDireccion` = 'DIRECCION2', `cliCorreo` = 'CORREO2', `cliTelefono` = 'TELEFONO2' WHERE (`cliDocumento` = '12345');
+
+
+DELETE FROM `naturvida`.`tbl_clientes` WHERE (`cliDocumento` = '123456');
+
+--------TBL_CLIENTES--------

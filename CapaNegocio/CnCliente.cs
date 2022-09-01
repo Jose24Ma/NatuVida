@@ -8,6 +8,10 @@ namespace CapaNegocio
     public class CnCliente
     {
         CdCliente cdCliente = new CdCliente();
+
+        // Metodos de llamado de los procesos crud de la capa de datos
+
+        //Metodos Producto
         public void CrearProducto(CeCliente CrearProducto)
         {
             cdCliente.InsertarProducto(CrearProducto);
@@ -25,7 +29,7 @@ namespace CapaNegocio
             cdCliente.Eliminar(EliminarProducto);
         }
 
-
+        //Metodos Cliente
         public void CrearCliente(CeCliente CrearCliente)
         {
             cdCliente.InsertarCliente(CrearCliente);
@@ -41,6 +45,12 @@ namespace CapaNegocio
         public void EliminarCliente(CeCliente EliminarCliente)
         {
             cdCliente.EliminarCli(EliminarCliente);
+        }
+
+        //Metodo Factura
+        public void CrearFactura(CeCliente CrearFactura)
+        {
+            cdCliente.CrearFactura(CrearFactura);
         }
     }
 }

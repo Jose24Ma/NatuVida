@@ -102,7 +102,7 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.btnSalir);
-            this.splitContainer1.Size = new System.Drawing.Size(1030, 525);
+            this.splitContainer1.Size = new System.Drawing.Size(1030, 538);
             this.splitContainer1.SplitterDistance = 157;
             this.splitContainer1.TabIndex = 1;
             // 
@@ -110,7 +110,7 @@
             // 
             this.btnSalir.BackColor = System.Drawing.Color.CadetBlue;
             this.btnSalir.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnSalir.Location = new System.Drawing.Point(21, 164);
+            this.btnSalir.Location = new System.Drawing.Point(12, 195);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(115, 62);
             this.btnSalir.TabIndex = 0;
@@ -122,7 +122,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1030, 549);
+            this.ClientSize = new System.Drawing.Size(1030, 562);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;

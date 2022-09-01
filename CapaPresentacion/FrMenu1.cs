@@ -17,27 +17,24 @@ namespace CapaPresentacion
             InitializeComponent();
         }
 
-        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
+        // Acciones del MenuStrip de llamado de Forms
+        private void productosToolStripMenuItem_Click(object sender, EventArgs e)//Accion para llamar dentro del form de menu el form de productos
         {
-            
             FrProductos frProductos = new FrProductos();
             frProductos.MdiParent = this;
             this.splitContainer1.Panel2.Controls.Add(frProductos);
             frProductos.Show();
-
         }
 
-
-        private void facturarToolStripMenuItem_Click(object sender, EventArgs e)
+        private void facturarToolStripMenuItem_Click(object sender, EventArgs e)//Accion para llamar dentro del form de menu el form de facturacion
         {
-
             FrFactura frFactura = new FrFactura();
             frFactura.MdiParent = this;
             this.splitContainer1.Panel2.Controls.Add(frFactura);
             frFactura.Show();
         }
 
-        private void inventarioToolStripMenuItem_Click(object sender, EventArgs e)
+        private void inventarioToolStripMenuItem_Click(object sender, EventArgs e)//Accion para llamar dentro del form de menu el form de inventario (sin terminar)
         {
             FrInventario frInventario = new FrInventario();
             frInventario.MdiParent = this;
@@ -45,7 +42,7 @@ namespace CapaPresentacion
             frInventario.Show();
         }
 
-        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e) //Accion para llamar dentro del form de menu el form de clientes
         {
             FrClientes frClientes = new FrClientes();
             frClientes.MdiParent = this;
@@ -53,7 +50,7 @@ namespace CapaPresentacion
             frClientes.Show();
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
+        private void btnSalir_Click(object sender, EventArgs e) // Accion para terminar el programa
         {
             Application.Exit();
         }

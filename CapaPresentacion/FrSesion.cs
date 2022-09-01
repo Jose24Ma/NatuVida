@@ -19,7 +19,11 @@ namespace CapaPresentacion
         {
             InitializeComponent(); 
         }
+
+        // Conexion Base de Datos
         MySqlConnection connection = new MySqlConnection("Server=Localhost;User=root;Password=admin;Port=3306;Database=naturvida;");
+        
+        //Inicio Sesion (Login)
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             try

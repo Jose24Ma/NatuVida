@@ -7,7 +7,10 @@ namespace CapaDatos
 {
     public class CdCliente
     {
+        // Conexion con la Base de Datos NaturVida
         string CadenaConexion = "Server=Localhost;User=root;Password=admin;Port=3306;Database=naturvida;";
+
+        //Metodos CRUD de productos
         public void InsertarProducto(CeCliente ceInsertarProducto)
         {
             MySqlConnection mySqlConnection = new MySqlConnection(CadenaConexion);
@@ -50,11 +53,12 @@ namespace CapaDatos
             MessageBox.Show("Registro Eliminado");
         }
 
+        //Metodos CRUD de clientes
         public void InsertarCliente(CeCliente ceInsertarCliente)
         {
             MySqlConnection mySqlConnection = new MySqlConnection(CadenaConexion);
             mySqlConnection.Open();
-            string Query = "INSERT INTO `tbl_clientes` (`cliNombre`, `cliDocumento`, `cliDireccion`, `cliCorreo`, `cliTelefono`) VALUES('"+ceInsertarCliente.cliTelefono+"','"+ceInsertarCliente.cliDocumento+"','"+ceInsertarCliente.cliDireccion+"','"+ceInsertarCliente.cliCorreo+"','"+ceInsertarCliente.cliTelefono+"');";
+            string Query = "INSERT INTO `tbl_clientes` (`cliNombre`, `cliDocumento`, `cliDireccion`, `cliCorreo`, `cliTelefono`) VALUES('"+ceInsertarCliente.cliNombre+"','"+ceInsertarCliente.cliDocumento+"','"+ceInsertarCliente.cliDireccion+"','"+ceInsertarCliente.cliCorreo+"','"+ceInsertarCliente.cliTelefono+"');";
             MySqlCommand mySqlCommand = new MySqlCommand(Query, mySqlConnection);
             mySqlCommand.ExecuteNonQuery();
             mySqlConnection.Close();
@@ -75,7 +79,7 @@ namespace CapaDatos
         {
             MySqlConnection mySqlConnection = new MySqlConnection(CadenaConexion);
             mySqlConnection.Open();
-            string Query = "UPDATE `tbl_productos` SET `cliNombre` = '" + ceInsertarCliente.cliNombre + "', `cliDireccion` = '" + ceInsertarCliente.cliDireccion + "', `cliCorreo` = '" + ceInsertarCliente.cliCorreo + "' ,`cliTelefono` = '" + ceInsertarCliente.cliTelefono + "' WHERE (`proDocumento` = '" + ceInsertarCliente.cliDocumento + "');";
+            string Query = "UPDATE `tbl_clientes` SET `cliNombre` = '" + ceInsertarCliente.cliNombre + "', `cliDireccion` = '" + ceInsertarCliente.cliDireccion + "', `cliCorreo` = '" + ceInsertarCliente.cliCorreo + "' ,`cliTelefono` = '" + ceInsertarCliente.cliTelefono + "' WHERE (`cliDocumento` = '" + ceInsertarCliente.cliDocumento + "');";
             MySqlCommand mySqlCommand = new MySqlCommand(Query, mySqlConnection);
             mySqlCommand.ExecuteNonQuery();
             mySqlConnection.Close();
@@ -90,6 +94,18 @@ namespace CapaDatos
             mySqlCommand.ExecuteNonQuery();
             mySqlConnection.Close();
             MessageBox.Show("Registro Eliminado");
+        }
+
+        //Metodod de creacion de factura
+        public void CrearFactura(CeCliente ceCrearFactura)
+        {
+            MySqlConnection mySqlConnection = new MySqlConnection(CadenaConexion);
+            mySqlConnection.Open();
+            string Query = "INSERT INTO `tbl_facturas` (`facNumero`, `facFecha`, `facCliente`, `facValorTotal`, `facVendedor`) VALUES ('"+ceCrearFactura.facNumero+"','"+ceCrearFactura.facFecha+"','"+ceCrearFactura.facCliente+"','"+ceCrearFactura.facValorTotal+"','"+ceCrearFactura.facVendedor+"');";
+            MySqlCommand mySqlCommand = new MySqlCommand(Query, mySqlConnection);
+            mySqlCommand.ExecuteNonQuery();
+            mySqlConnection.Close();
+            MessageBox.Show("Registro exitoso");
         }
     }
 }

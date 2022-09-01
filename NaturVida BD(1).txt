@@ -1,0 +1,120 @@
+CREATE TABLE `naturvida`.`tbl_clientes` (
+  
+`cliNombre` VARCHAR(45) NOT NULL,
+  
+`cliDocumento` INT NOT NULL,
+  
+`cliDireccion` VARCHAR(45) NOT NULL,
+  
+`cliCorreo` VARCHAR(45) NOT NULL,
+  
+`cliTelefono` VARCHAR(45) NOT NULL,
+  
+PRIMARY KEY (`cliDocumento`));
+
+CREATE TABLE `naturvida`.`tbl_vendedor` (
+ 
+ `venUsuario` VARCHAR(45) NOT NULL,
+  
+`venConstrasena` VARCHAR(45) NOT NULL,
+ 
+ PRIMARY KEY (`venUsuario`));
+
+CREATE TABLE `naturvida`.`tbl_productos` (
+ 
+ `proCodigo` INT NOT NULL,
+  
+`proDescripcion` VARCHAR(45) NULL,
+ 
+ `proValor` INT NULL,
+  
+`proCantidad` INT NULL,
+  
+PRIMARY KEY (`proCodigo`));
+
+CREATE TABLE `naturvida`.`tbl_facturas` (
+ 
+`facNumero` INT NOT NULL,
+  
+`facFecha` DATE NULL,
+  
+`facCliente` INT NULL,
+  
+`facValorTotal` INT NULL,
+  
+`facVendedor` VARCHAR(45) NULL,
+  
+PRIMARY KEY (`facNumero`));
+
+CREATE TABLE `naturvida`.`tbl_facturadetalle` (
+  
+`facdNumero` INT NOT NULL,
+  
+`facdProducto` INT NOT NULL,
+  
+`facdCantidad` INT NOT NULL);
+
+ALTER TABLE `naturvida`.`tbl_facturas` 
+
+ADD INDEX `facCliente_idx` (`facCliente` ASC) VISIBLE;
+
+;
+ALTER TABLE `naturvida`.`tbl_facturas`
+
+ADD CONSTRAINT `facCliente`
+  
+FOREIGN KEY (`facCliente`)
+  
+REFERENCES `naturvida`.`tbl_clientes` (`cliDocumento`)
+ 
+ ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+
+
+ALTER TABLE `naturvida`.`tbl_facturas` 
+
+ADD INDEX `facVendedor_idx` (`facVendedor` ASC) VISIBLE;
+
+;
+
+ALTER TABLE `naturvida`.`tbl_facturas` 
+
+ADD CONSTRAINT `facVendedor`
+  
+FOREIGN KEY (`facVendedor`)
+  
+REFERENCES `naturvida`.`tbl_vendedor` (`venUsuario`)
+  
+ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+
+ALTER TABLE `naturvida`.`tbl_facturadetalle` 
+
+ADD INDEX `facdNumero_idx` (`facdNumero` ASC) VISIBLE,
+
+ADD INDEX `facdProducto_idx` (`facdProducto` ASC) VISIBLE;
+
+;
+
+
+ALTER TABLE `naturvida`.`tbl_facturadetalle` 
+
+ADD CONSTRAINT `facdNumero`
+  
+FOREIGN KEY (`facdNumero`)
+  
+REFERENCES `naturvida`.`tbl_facturas` (`facNumero`)
+  
+ON DELETE NO ACTION
+  
+ON UPDATE NO ACTION,
+ADD CONSTRAINT `facdProducto`
+  
+FOREIGN KEY (`facdProducto`)
+  
+REFERENCES `naturvida`.`tbl_productos` (`proCodigo`)
+  
+ON DELETE NO ACTION
+  
+ON UPDATE NO ACTION;
+

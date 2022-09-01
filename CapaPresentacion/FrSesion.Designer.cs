@@ -40,11 +40,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.Control;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.Teal;
-            this.label1.Location = new System.Drawing.Point(183, 28);
+            this.label1.Location = new System.Drawing.Point(137, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(425, 92);
+            this.label1.Size = new System.Drawing.Size(249, 56);
             this.label1.TabIndex = 0;
             this.label1.Text = "  Sistema de Informacion\r\nTienda Naturista NaturVida\r\n";
             // 
@@ -52,7 +52,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(123, 177);
+            this.label2.Location = new System.Drawing.Point(52, 106);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(99, 32);
             this.label2.TabIndex = 1;
@@ -62,7 +62,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(82, 249);
+            this.label3.Location = new System.Drawing.Point(12, 171);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(139, 32);
             this.label3.TabIndex = 2;
@@ -71,20 +71,22 @@
             // txtUsuario
             // 
             this.txtUsuario.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsuario.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtUsuario.Location = new System.Drawing.Point(276, 175);
+            this.txtUsuario.Location = new System.Drawing.Point(167, 106);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(386, 34);
+            this.txtUsuario.Size = new System.Drawing.Size(283, 27);
             this.txtUsuario.TabIndex = 3;
             // 
             // txtContraseña
             // 
             this.txtContraseña.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtContraseña.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtContraseña.Location = new System.Drawing.Point(276, 247);
+            this.txtContraseña.Location = new System.Drawing.Point(167, 171);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '*';
-            this.txtContraseña.Size = new System.Drawing.Size(386, 34);
+            this.txtContraseña.Size = new System.Drawing.Size(283, 27);
             this.txtContraseña.TabIndex = 4;
             // 
             // btnIngresar
@@ -92,7 +94,7 @@
             this.btnIngresar.BackColor = System.Drawing.Color.CadetBlue;
             this.btnIngresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnIngresar.Font = new System.Drawing.Font("Book Antiqua", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnIngresar.Location = new System.Drawing.Point(325, 362);
+            this.btnIngresar.Location = new System.Drawing.Point(180, 256);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(127, 38);
             this.btnIngresar.TabIndex = 5;
@@ -105,7 +107,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(518, 333);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.txtContraseña);
             this.Controls.Add(this.txtUsuario);
