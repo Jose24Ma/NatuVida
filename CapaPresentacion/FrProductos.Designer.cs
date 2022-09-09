@@ -142,6 +142,7 @@
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(264, 29);
             this.txtCantidad.TabIndex = 7;
+            this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
             // 
             // txtValor
             // 
@@ -150,6 +151,7 @@
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(264, 29);
             this.txtValor.TabIndex = 6;
+            this.txtValor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtValor_KeyPress);
             // 
             // txtDescripcion
             // 
@@ -158,6 +160,7 @@
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(264, 29);
             this.txtDescripcion.TabIndex = 5;
+            this.txtDescripcion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDescripcion_KeyPress);
             // 
             // txtCodigo
             // 
@@ -166,6 +169,7 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(264, 29);
             this.txtCodigo.TabIndex = 4;
+            this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
             // 
             // label5
             // 
@@ -292,6 +296,7 @@
             this.txtCantidadMod.Name = "txtCantidadMod";
             this.txtCantidadMod.Size = new System.Drawing.Size(246, 29);
             this.txtCantidadMod.TabIndex = 12;
+            this.txtCantidadMod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidadMod_KeyPress);
             // 
             // label12
             // 
@@ -322,6 +327,7 @@
             this.txtValorMod.Name = "txtValorMod";
             this.txtValorMod.Size = new System.Drawing.Size(246, 29);
             this.txtValorMod.TabIndex = 9;
+            this.txtValorMod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtValorMod_KeyPress);
             // 
             // txtDescripcionMod
             // 
@@ -330,6 +336,7 @@
             this.txtDescripcionMod.Name = "txtDescripcionMod";
             this.txtDescripcionMod.Size = new System.Drawing.Size(246, 29);
             this.txtDescripcionMod.TabIndex = 8;
+            this.txtDescripcionMod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDescripcionMod_KeyPress);
             // 
             // txtCodigoMod
             // 
@@ -338,6 +345,7 @@
             this.txtCodigoMod.Name = "txtCodigoMod";
             this.txtCodigoMod.Size = new System.Drawing.Size(246, 29);
             this.txtCodigoMod.TabIndex = 7;
+            this.txtCodigoMod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigoMod_KeyPress);
             // 
             // label11
             // 
@@ -453,7 +461,7 @@
             this.Controls.Add(this.tcProductos);
             this.Controls.Add(this.label1);
             this.Name = "FrProductos";
-            this.Text = "FrProductos";
+            this.Text = "Productos";
             this.Load += new System.EventHandler(this.FrProductos_Load);
             this.tcProductos.ResumeLayout(false);
             this.tpIngresarPro.ResumeLayout(false);

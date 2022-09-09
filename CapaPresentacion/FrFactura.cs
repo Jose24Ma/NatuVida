@@ -88,26 +88,72 @@ namespace CapaPresentacion
         }
         private void totalFactura()// Metodo para realizar la operacion del total de la factura creada
         {
-            int Valor = Convert.ToInt32(txtValor.Text);
-            int Cantidad = Convert.ToInt32(txtCantidad.Text);
-            double Sumatorio = Valor * Cantidad;
-            textBox2.Text = Sumatorio.ToString();
+            if (String.IsNullOrEmpty(txtValor.Text))
+            {
+                MessageBox.Show("El valor no se especificado");
+            }
+            else if (String.IsNullOrEmpty(txtCantidad.Text))
+            {
+                MessageBox.Show("La cantidad no se especificado");
+            }
+            else
+            {
+                int Valor = Convert.ToInt32(txtValor.Text);
+                int Cantidad = Convert.ToInt32(txtCantidad.Text);
+                double Sumatorio = Valor * Cantidad;
+                textBox2.Text = Sumatorio.ToString();
+            }
         }
         private void LimpiarForm()//Metodo para limpiar formulario luego de guardar los datos
         {
             txtCantidad.Text = string.Empty;
             txtNumero.Text = string.Empty;
+            txtValor.Text = string.Empty;
             cbClientes.Text = string.Empty;
             cbProductos.Text = string.Empty;
             GridFactura.DataSource = string.Empty;
+            textBox2.Text = string.Empty;
+            txtFecha.Text = string.Empty;
+            cbVendedor.Text = string.Empty;
         }
         public void Guardar()//Metodo de guardar los datos ingresados en los textbos, para luego cargarlos a la BD
         {
-            ceCliente.facNumero = Convert.ToInt32(txtNumero.Text);
-            ceCliente.facFecha = txtFecha.Text;
-            ceCliente.facCliente = Convert.ToInt32(cbClientes.Text);
-            ceCliente.facValorTotal = Convert.ToInt32(textBox2.Text.ToString());
-            ceCliente.facVendedor = cbVendedor.Text.ToString();
+            if (true)
+            {
+                if (String.IsNullOrEmpty(txtNumero.Text))
+                {
+                    MessageBox.Show("El numero es obligatorio");
+                }
+                else
+                {
+                    ceCliente.facNumero = Convert.ToInt32(txtNumero.Text);
+                }
+                if (String.IsNullOrEmpty(txtFecha.Text))
+                {
+                    MessageBox.Show("La fecha es obligatorio");
+                }
+                else
+                {
+                    ceCliente.facFecha = txtFecha.Text;
+                }
+                if (String.IsNullOrEmpty(cbClientes.Text))
+                {
+                    MessageBox.Show("Seleccione un cliente");
+                }
+                else
+                {
+                    ceCliente.facCliente = Convert.ToInt32(cbClientes.Text);
+                }
+                if(String.IsNullOrEmpty(cbVendedor.Text))
+                {
+                    MessageBox.Show(" Seleccione un vendedor");
+                }
+                else
+                {
+                    ceCliente.facVendedor = cbVendedor.Text.ToString();
+                }
+                ceCliente.facValorTotal = Convert.ToInt32(textBox2.Text.ToString());    
+            }
             cnCliente.CrearFactura(ceCliente);
             LimpiarForm();
         }
@@ -115,6 +161,10 @@ namespace CapaPresentacion
         //Crear Factura
         private void button2_Click(object sender, EventArgs e) //Boton Agregar Producto
         {
+            if (String.IsNullOrEmpty(txtCantidad.Text))
+            {
+                MessageBox.Show("La cantidad no se especificado");
+            }
             addProducto();
             totalFactura();
         }
@@ -122,12 +172,39 @@ namespace CapaPresentacion
         {
             Guardar();     
         }
-        
         private void GridFactura_CellContentClick(object sender, DataGridViewCellEventArgs e) { }// Accion sin usar
-
         private void txtValor_TextChanged(object sender, EventArgs e)
         {
 
         }
+        private void cbProductos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MySqlConnection connection = new MySqlConnection(CadenaConexion);
+            connection.Open();
+            string Query = "SELECT `proValor` FROM tbl_productos WHERE proDescripcion = @Des;";
+            MySqlCommand command = new MySqlCommand(Query, connection);
+            command.Parameters.AddWithValue("@Des", cbProductos.Text);
+            MySqlDataReader Adaptador = command.ExecuteReader();
+            while (Adaptador.Read())
+            {
+                txtValor.Text = (Adaptador["proValor"].ToString());
+            }
+            connection.Close();
+        }
+        private void txtCantidad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNumero_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.SoloNumeros(e);
+        }
+
+        private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.SoloNumeros(e);
+        }
     }
 }
+

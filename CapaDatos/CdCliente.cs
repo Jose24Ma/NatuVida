@@ -26,7 +26,7 @@ namespace CapaDatos
             DataTable data = new DataTable();
             MySqlConnection mySqlConnection = new MySqlConnection(CadenaConexion);
             mySqlConnection.Open();
-            string Query = "SELECT `proCodigo`,`proDescripcion`, `proValor`, `proCantidad` FROM tbl_productos LIMIT 1000;";
+            string Query = "SELECT * FROM tbl_productos ;";
             MySqlDataAdapter Adaptador;
             Adaptador = new MySqlDataAdapter(Query, mySqlConnection);
             Adaptador.Fill(data);
@@ -89,7 +89,7 @@ namespace CapaDatos
         {
             MySqlConnection mySqlConnection = new MySqlConnection(CadenaConexion);
             mySqlConnection.Open();
-            string Query = "DELETE FROM `tbl_clientes` WHERE (`cliDocumento` = '" + ceInsertarCliente.cliDocumento + "');";
+            string Query = "DELETE FROM `tbl_clientes` WHERE (`cliDocumento` = '" + ceInsertarCliente.cliDocumento + " ');";
             MySqlCommand mySqlCommand = new MySqlCommand(Query, mySqlConnection);
             mySqlCommand.ExecuteNonQuery();
             mySqlConnection.Close();
@@ -107,5 +107,18 @@ namespace CapaDatos
             mySqlConnection.Close();
             MessageBox.Show("Registro exitoso");
         }
+
+        //Metodo Inventario
+        //public DataTable LeerInventario()
+        //{
+        //    DataTable data = new DataTable();
+        //    MySqlConnection mySqlConnection = new MySqlConnection(CadenaConexion);
+        //    mySqlConnection.Open();
+        //    string Query = "SELECT `proDescripcion` AS Descripcion,`proValor` AS Valor, `proCantidad`AS Disponible FROM tbl_productos ;";
+        //    MySqlDataAdapter Adaptador;
+        //    Adaptador = new MySqlDataAdapter(Query, mySqlConnection);
+        //    Adaptador.Fill(data);
+        //    return data;
+        //}
     }
 }

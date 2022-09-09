@@ -31,6 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.GridInventario = new System.Windows.Forms.DataGridView();
+            this.cbInventario = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.GridInventario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -39,7 +40,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.Teal;
-            this.label1.Location = new System.Drawing.Point(269, 9);
+            this.label1.Location = new System.Drawing.Point(253, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(136, 37);
             this.label1.TabIndex = 0;
@@ -50,7 +51,7 @@
             this.btnConsultar.BackColor = System.Drawing.Color.CadetBlue;
             this.btnConsultar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnConsultar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnConsultar.Location = new System.Drawing.Point(279, 79);
+            this.btnConsultar.Location = new System.Drawing.Point(264, 84);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(110, 36);
             this.btnConsultar.TabIndex = 3;
@@ -61,22 +62,32 @@
             // GridInventario
             // 
             this.GridInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridInventario.Location = new System.Drawing.Point(113, 143);
+            this.GridInventario.Location = new System.Drawing.Point(147, 126);
             this.GridInventario.Name = "GridInventario";
             this.GridInventario.RowTemplate.Height = 25;
-            this.GridInventario.Size = new System.Drawing.Size(441, 222);
+            this.GridInventario.Size = new System.Drawing.Size(344, 222);
             this.GridInventario.TabIndex = 4;
+            // 
+            // cbInventario
+            // 
+            this.cbInventario.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbInventario.FormattingEnabled = true;
+            this.cbInventario.Location = new System.Drawing.Point(187, 49);
+            this.cbInventario.Name = "cbInventario";
+            this.cbInventario.Size = new System.Drawing.Size(269, 29);
+            this.cbInventario.TabIndex = 5;
             // 
             // FrInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(674, 390);
+            this.Controls.Add(this.cbInventario);
             this.Controls.Add(this.GridInventario);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.label1);
             this.Name = "FrInventario";
-            this.Text = "FrInventario";
+            this.Text = "Inventario";
             this.Load += new System.EventHandler(this.FrInventario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GridInventario)).EndInit();
             this.ResumeLayout(false);
@@ -89,5 +100,6 @@
         private Label label1;
         private Button btnConsultar;
         private DataGridView GridInventario;
+        private ComboBox cbInventario;
     }
 }

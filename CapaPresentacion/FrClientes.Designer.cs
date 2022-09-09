@@ -162,9 +162,11 @@
             // 
             this.txtTelefono.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtTelefono.Location = new System.Drawing.Point(217, 198);
+            this.txtTelefono.MaxLength = 10;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(242, 27);
             this.txtTelefono.TabIndex = 7;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // txtDireccion
             // 
@@ -181,6 +183,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(242, 27);
             this.txtNombre.TabIndex = 5;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // txtDocumento
             // 
@@ -189,6 +192,7 @@
             this.txtDocumento.Name = "txtDocumento";
             this.txtDocumento.Size = new System.Drawing.Size(242, 27);
             this.txtDocumento.TabIndex = 4;
+            this.txtDocumento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDocumento_KeyPress);
             // 
             // label5
             // 
@@ -264,6 +268,7 @@
             this.GridDatosCli.RowTemplate.Height = 25;
             this.GridDatosCli.Size = new System.Drawing.Size(506, 207);
             this.GridDatosCli.TabIndex = 2;
+            this.GridDatosCli.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridDatosCli_CellContentClick);
             // 
             // cbCliente
             // 
@@ -315,6 +320,7 @@
             this.txtTelefonoCli.Name = "txtTelefonoCli";
             this.txtTelefonoCli.Size = new System.Drawing.Size(302, 29);
             this.txtTelefonoCli.TabIndex = 14;
+            this.txtTelefonoCli.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefonoCli_KeyPress);
             // 
             // txtCorreoCli
             // 
@@ -339,6 +345,7 @@
             this.txtNombreCli.Name = "txtNombreCli";
             this.txtNombreCli.Size = new System.Drawing.Size(302, 29);
             this.txtNombreCli.TabIndex = 11;
+            this.txtNombreCli.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreCli_KeyPress);
             // 
             // txtDocumentoCli
             // 
@@ -347,6 +354,7 @@
             this.txtDocumentoCli.Name = "txtDocumentoCli";
             this.txtDocumentoCli.Size = new System.Drawing.Size(302, 29);
             this.txtDocumentoCli.TabIndex = 10;
+            this.txtDocumentoCli.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDocumentoCli_KeyPress);
             // 
             // label14
             // 
